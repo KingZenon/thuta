@@ -2,6 +2,7 @@ import { Building2, LayoutDashboard, LogOut, Menu, Plus } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
 import { useAuth } from "@/auth";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function SiteHeader() {
   const { user, logout } = useAuth();
@@ -14,6 +15,7 @@ export function SiteHeader() {
         <a href="/#how">How it works</a>
       </nav>
       <div className="nav-actions">
+        <ThemeToggle />
         {user ? <>
           <Button variant="ghost" asChild><Link to={user.role === "ADMIN" ? "/admin" : "/dashboard"}><LayoutDashboard size={16} /> Dashboard</Link></Button>
           {user.role === "USER" && <Button asChild><Link to="/dashboard/new"><Plus size={16} /> List property</Link></Button>}

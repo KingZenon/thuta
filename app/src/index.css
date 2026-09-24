@@ -13,3 +13,36 @@
 .form-page{max-width:980px}.form-heading{display:flex;align-items:end;justify-content:space-between;margin:35px 0}.form-progress{display:flex;align-items:center;gap:10px;border-left:1px solid var(--line);padding-left:25px}.form-progress strong{font:500 32px "Newsreader",serif;color:var(--green)}.form-progress span{font-size:12px;color:var(--muted)}.listing-form section{display:grid;grid-template-columns:210px 1fr;gap:40px;border-top:1px solid var(--line);padding-block:35px}.listing-form section>h2{grid-column:1;font:500 25px "Newsreader",serif;margin:0}.listing-form section>p{grid-column:1;color:var(--muted);font-size:12px;line-height:1.5;margin:-15px 0 0}.listing-form section>:last-child{grid-column:2;grid-row:1/span 3}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.form-grid.three{grid-template-columns:repeat(3,1fr)}.form-grid .full{grid-column:1/-1}.form-grid .wide{grid-column:span 2}.photo-input{padding:18px;border:1px dashed #aeb9b1;border-radius:10px;background:#f4f5f0}.photo-input>div{display:flex;gap:9px;align-items:center;margin-bottom:12px;color:var(--green);font-weight:600}.form-actions{display:flex;justify-content:flex-end;gap:10px}.route-loader{min-height:80vh;display:grid;place-items:center}
 @media(max-width:900px){.desktop-nav{display:none}.property-grid{grid-template-columns:repeat(2,1fr)}.city-grid{grid-template-columns:1fr;height:auto}.city-card{height:280px}.benefit-grid{grid-template-columns:1fr}.benefit-grid article{border-right:0;border-bottom:1px solid var(--line)}.detail-layout{grid-template-columns:1fr;gap:35px}.contact-card{position:static}.auth-page{grid-template-columns:1fr}.auth-visual{min-height:360px}.review-list article{grid-template-columns:150px 1fr}.review-list img{width:150px}.review-actions{grid-column:2;flex-direction:row}}
 @media(max-width:640px){.container{width:min(100% - 28px,1180px)}.nav-shell{height:68px}.nav-actions>.button:not(.mobile-menu):not(:last-child){display:none}.mobile-menu{display:inline-flex}.hero{min-height:680px}.hero-content{padding-block:60px 100px}.hero h1{font-size:53px}.hero-lead{font-size:15px}.search-row{flex-direction:column;align-items:stretch}.search-row label{width:100%}.hero-stat{display:none}.section{padding-block:75px}.section-heading,.cta-inner,.dashboard-head,.form-heading,.detail-heading{align-items:start;flex-direction:column}.property-grid,.stat-grid,.admin-stats{grid-template-columns:1fr}.city-section{padding-block:75px}.filter-bar{flex-direction:column;align-items:stretch}.filter-bar label{width:100%}.detail-hero{height:360px}.detail-heading h1{font-size:42px}.detail-price{text-align:left}.detail-facts{gap:20px;flex-wrap:wrap}.auth-form-wrap{padding:45px 22px}.auth-visual{padding:30px 22px}.listing-table article{grid-template-columns:75px 1fr}.listing-table img{width:75px;height:75px}.row-actions{grid-column:2}.review-list article{grid-template-columns:1fr}.review-list img{width:100%;height:220px}.review-actions{grid-column:1}.listing-form section{grid-template-columns:1fr;gap:15px}.listing-form section>h2,.listing-form section>p,.listing-form section>:last-child{grid-column:1;grid-row:auto}.form-grid,.form-grid.three{grid-template-columns:1fr}.form-grid .wide{grid-column:1}.footer-inner{flex-direction:column;justify-content:center;gap:8px}}
+
+/* Theme controls remain visible on routes without the site header. */
+.auth-page{position:relative}.auth-theme-toggle{position:absolute;right:24px;top:24px;z-index:2;background:var(--paper);color:var(--ink);border:1px solid var(--line)}.auth-theme-toggle:hover{background:var(--sage)}
+@media(max-width:640px){.nav-actions>.button[aria-label^="Switch to"]:not(.mobile-menu):not(:last-child){display:inline-flex}}
+
+:root[data-theme="dark"]{--ink:#ebf2eb;--forest:#9bd7ae;--green:#9bd7ae;--sage:#243a2c;--cream:#18241d;--paper:#121b16;--muted:#afc0b3;--line:#34473a;color-scheme:dark}
+:root[data-theme="dark"] .site-header{border-bottom-color:var(--line)}
+:root[data-theme="dark"] .desktop-nav{color:#c4d4c7}
+:root[data-theme="dark"] .brand-mark,:root[data-theme="dark"] .button-primary{background:#8ecaa0;color:#102018}
+:root[data-theme="dark"] .button-primary:hover{background:#b1e2bd}
+:root[data-theme="dark"] .button-outline{border-color:var(--line)}
+:root[data-theme="dark"] .button-outline:hover,:root[data-theme="dark"] .button-ghost:hover{background:#26382c}
+:root[data-theme="dark"] .input,:root[data-theme="dark"] select{background:#1b2a20;border-color:var(--line);color:var(--ink)}
+:root[data-theme="dark"] .input:focus,:root[data-theme="dark"] select:focus{box-shadow:0 0 0 3px #9bd7ae33}
+:root[data-theme="dark"] .search-panel{background:#1b2a20f5}
+:root[data-theme="dark"] .property-card,:root[data-theme="dark"] .stat-grid article,:root[data-theme="dark"] .dashboard-panel{background:#1b2920}
+:root[data-theme="dark"] .property-card:hover{box-shadow:0 18px 45px #0007}
+:root[data-theme="dark"] .card-image-wrap{background:#27382c}
+:root[data-theme="dark"] .image-badge,:root[data-theme="dark"] .card-arrow{background:#1b2920f0;color:var(--ink)}
+:root[data-theme="dark"] .facts,:root[data-theme="dark"] .description p{color:#bacbbd}
+:root[data-theme="dark"] .empty-showcase,:root[data-theme="dark"] .filter-bar,:root[data-theme="dark"] .demo-accounts,:root[data-theme="dark"] .photo-input{background:#1c2b21;border-color:var(--line)}
+:root[data-theme="dark"] .demo-accounts button{border-top-color:var(--line)}
+:root[data-theme="dark"] .city-section{background:#193b29}
+:root[data-theme="dark"] .cta{background:#245238}
+:root[data-theme="dark"] .cta .button{color:#15331e}
+:root[data-theme="dark"] footer{background:#0d1710}
+:root[data-theme="dark"] .notice.error{background:#4a2926;color:#ffd9d2;border-color:#754039}
+:root[data-theme="dark"] .notice.success{background:#1c3c29;color:#c9edd1;border-color:#366b46}
+:root[data-theme="dark"] .status.pending_review{background:#514221;color:#ffe6a0}
+:root[data-theme="dark"] .status.published{background:#264631;color:#d5f4db}
+:root[data-theme="dark"] .status.draft{background:#354038;color:#d2ddd3}
+:root[data-theme="dark"] .status.rejected{background:#542e2a;color:#ffddd5}
+:root[data-theme="dark"] .rejection{color:#f3a99e}
