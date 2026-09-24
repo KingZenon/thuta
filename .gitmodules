@@ -1,0 +1,9 @@
+[submodule "app"]
+	path = app
+	url = https://github.com/KingZenon/thuta-app.git
+[submodule "api"]
+	path = api
+	url = https://github.com/KingZenon/thuta-api.git
+[submodule "mobile"]
+	path = mobile
+	url = https://github.com/KingZenon/thuta-mobile.git
