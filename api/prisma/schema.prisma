@@ -1,0 +1,57 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id           String    @id @default(uuid())
+  email        String    @unique
+  passwordHash String
+  displayName  String
+  phone        String?
+  role         String    @default("USER")
+  status       String    @default("ACTIVE")
+  listings     Listing[]
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  @@index([role, status])
+}
+
+model Listing {
+  id              String   @id @default(uuid())
+  ownerId         String
+  owner           User     @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  slug            String   @unique
+  status          String   @default("DRAFT")
+  purpose         String
+  propertyType    String
+  title           String
+  description     String
+  priceAmount     Int
+  currency        String   @default("MMK")
+  city            String
+  township        String
+  addressLine     String
+  bedrooms        Int?
+  bathrooms       Int?
+  areaValue       Int
+  areaUnit        String   @default("SQFT")
+  contactPhone    String?
+  contactEmail    String?
+  coverImageUrl   String
+  rejectionReason String?
+  submittedAt     DateTime?
+  publishedAt     DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([status, publishedAt])
+  @@index([city, purpose, propertyType])
+  @@index([ownerId, status])
+  @@index([priceAmount])
+}
