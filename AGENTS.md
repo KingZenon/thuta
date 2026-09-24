@@ -19,3 +19,4 @@ This Git repository links three sibling project repositories as submodules: `app
 - The current lockfiles in `app/` and `api/` use pnpm. Run commands from the project directory.
 
 For feature requirements, see [SPEC.md](SPEC.md). For setup and project status, see [README.md](README.md).
+For whole-workspace GitHub publication, use the project-local [github-publish skill](.agent/skills/github-publish/SKILL.md).
